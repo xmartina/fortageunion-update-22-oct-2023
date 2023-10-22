@@ -102,7 +102,7 @@ if(isset($_POST['profile_save'])){
     $acct_cot = $acct_cot_ResultCode['acct_cot'];
 
 
-    $sql = "UPDATE users SET acct_username=:acct_username firstname=:firstname, lastname=:lastname, acct_no=:acct_no, acct_type=:acct_type,acct_email=:acct_email,acct_dob=:acct_dob,acct_occupation=:acct_occupation,acct_phone=:acct_phone,acct_gender=:acct_gender,marital_status=:marital_status,acct_limit=:acct_limit,acct_otp=:acct_otp,acct_cot=:acct_cot,acct_tax=:acct_tax,acct_imf=:acct_imf,acct_balance=:acct_balance,limit_remain=:limit_remain WHERE id=:id";
+    $sql = "UPDATE users SET acct_username=:acct_username, firstname=:firstname, lastname=:lastname, acct_no=:acct_no, acct_type=:acct_type,acct_email=:acct_email,acct_dob=:acct_dob,acct_occupation=:acct_occupation,acct_phone=:acct_phone,acct_gender=:acct_gender,marital_status=:marital_status,acct_limit=:acct_limit,acct_otp=:acct_otp,acct_cot=:acct_cot,acct_tax=:acct_tax,acct_imf=:acct_imf,acct_balance=:acct_balance,limit_remain=:limit_remain WHERE id=:id";
     $stmt = $conn->prepare($sql);
     $stmt->execute([
         'acct_no'=>$acct_no,
